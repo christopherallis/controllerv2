@@ -1,0 +1,17 @@
+##autocmd
+#wifi
+aggiestudent,irc222
+dd-wrt,irc222
+ardrone2_030623,lksadjf
+
+#devices
+ubuntu,192.168.1.128,inteldrone,irc222
+ardrone1,192.168.1.1,ardrone2_030623,adf
+
+#commands
+wifi: ardrone2_030623
+wait: 2
+exe: echo "./data/wifi.sh" | telnet 192.168.1.1
+wifi: dd-wrt
+wait: 2
+remote: ubuntu "touch ~/Desktop/TEST_FILE.txt"
