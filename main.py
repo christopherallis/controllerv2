@@ -124,7 +124,6 @@ def readCommandsFromFile(f):
     while line and line[0] != "#":
         if not line.isspace():
             info = re.findall(r'^(.+):\s?(.+)$',line)[0]
-            print(info)
             if info[0] == "remote":
                 info2 = re.findall(r'(\w+) "(.+)"',info[1])[0]
                 RemoteCommand(Device.devices[info2[0]],info2[1])
